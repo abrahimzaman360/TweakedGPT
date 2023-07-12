@@ -11,6 +11,8 @@ using PrivateGPT implementation for using alpaca models;
 ``` pip install -r requirements.txt ```
 
 ## Use Notebook or Manually Run Files (In Sequence):
-``` python constants.py ```
-``` python ingest.py ```
+``` python constants.py ``` 
+
+``` python ingest.py ``` 
+
 ``` python main.py ```
