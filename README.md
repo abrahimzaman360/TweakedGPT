@@ -11,6 +11,8 @@ using PrivateGPT implementation for using alpaca models;
 ``` pip install -r requirements.txt ```
 
 ## Use Notebook or Manually Run Files (In Sequence):
+Setup HuggingFace Account and Get a Token and Paste in Main.py file!
+
 ``` python constants.py ``` 
 
 ``` python ingest.py ``` 
