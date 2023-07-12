@@ -11,7 +11,7 @@ from transformers import pipeline, GenerationConfig
 from langchain.llms import HuggingFacePipeline
 import torch
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "Your HuggingFace Token Here"
 os.environ['EMBEDDINGS_MODEL_NAME'] = 'all-MiniLM-L6-v2'
 
 import argparse
