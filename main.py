@@ -53,6 +53,24 @@ llm = HuggingFacePipeline(pipeline=pipe)
 qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever,
                                  return_source_documents=True)
 
+def Ask(question):
+    query = question
+    res = qa(query)
+    answer, docs = res['result'], res['source_documents']
+
+    print(f"Question: {query}")
+    print(f"Answer: {answer}")
+
+    print(f"\nSources: ")
+    for document in docs:
+        print(f'{document.metadata["source"]} :')
+
+while True:
+    query = input("Ask Me Questions: ")
+    Ask(query)
+
+# For Telegram Bot Only:
+"""
 async def greet(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.full_name}, How may I help you?')
 
@@ -81,3 +99,5 @@ try:
     app.run_polling()
 except Exception as e:
     print(e)
+"""
+
